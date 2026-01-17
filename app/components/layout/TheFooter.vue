@@ -88,12 +88,12 @@ const socials = [
   },
   {
     name: "LinkedIn",
-    url: "https://linkedin.com/in/haidarmiqdad",
+    url: "https://www.linkedin.com/in/haidar-miqdad-063901302",
     icon: "mdi:linkedin",
   },
   {
     name: "Instagram",
-    url: "https://instagram.com/haidarmiqdad",
+    url: "https://instagram.com/haidarmqdd",
     icon: "mdi:instagram",
   },
 ];

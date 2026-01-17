@@ -1,5 +1,4 @@
 <script setup lang="ts">
-// --- Config Animasi Teks (TIDAK BERUBAH) ---
 const slideUp = {
   initial: { opacity: 0, y: 30 },
   enter: { opacity: 1, y: 0, transition: { duration: 800, ease: "easeOut" } },
@@ -180,7 +179,7 @@ const orbitingStack = [
 </template>
 
 <style scoped>
-/* Animasi Floating (TIDAK BERUBAH) */
+/* Animasi Floating */
 @keyframes float-slow {
   0%,
   100% {
