@@ -126,7 +126,7 @@ const orbitingStack = [
               />
             </BaseButton>
 
-            <BaseButton href="/resume.pdf" variant="outline">
+            <BaseButton href="pdf/CV_Haidar_Miqdad.pdf" variant="outline">
               Download CV
             </BaseButton>
           </div>
