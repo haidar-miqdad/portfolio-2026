@@ -19,7 +19,7 @@ const orbitingStack = [
   {
     name: "Golang",
     icon: "vscode-icons:file-type-go",
-    positionClass: "top-0 left-12 md:top-2 md:left-0 z-10",
+    positionClass: "top-4 -left-2 md:top-6 md:-left-8 z-10",
     animationClass: "animate-float-slow",
     delay: "0s",
   },
@@ -71,7 +71,7 @@ const orbitingStack = [
       class="container mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-0 items-center"
     >
       <div
-        class="lg:col-span-7 order-2 lg:order-1 relative z-10 flex flex-col justify-center"
+        class="lg:col-span-7 order-2 lg:order-1 relative z-10 flex flex-col items-center lg:items-start text-center lg:text-left"
       >
         <ClientOnly>
           <div
@@ -117,7 +117,7 @@ const orbitingStack = [
             :initial="slideUp.initial"
             :enter="slideUp.enter"
             :delay="400"
-            class="flex flex-wrap gap-5"
+            class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center lg:justify-start"
           >
             <BaseButton href="#projects" class="shadow-lg shadow-accent/10">
               Explore Work
