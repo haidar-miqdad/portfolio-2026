@@ -1,5 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  app: {
+    baseURL: "/portfolio-2026/",
+    buildAssetsDir: "assets",
+  },
+
+  experimental: {
+    payloadExtraction: false,
+  },
   srcDir: "app/",
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
