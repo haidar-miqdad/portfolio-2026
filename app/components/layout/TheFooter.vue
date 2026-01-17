@@ -1,74 +1,100 @@
 <template>
-  <footer class="bg-primary pt-20 pb-12 relative overflow-hidden">
+  <footer
+    class="relative z-10 w-full border-t border-white/10 bg-black/20 backdrop-blur-md pt-16 pb-12 mt-20"
+  >
     <div
-      class="absolute bottom-[-150px] left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-accent/5 rounded-full blur-[120px] -z-10 pointer-events-none"
+      class="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-[1px] bg-gradient-to-r from-transparent via-accent/50 to-transparent"
     ></div>
 
-    <div
-      class="mx-auto max-w-[1000px] px-6 md:px-12 flex flex-col items-center text-center"
-    >
-      <div class="flex gap-8 mb-8">
-        <a
-          href="https://github.com/haidarmiqdad"
-          target="_blank"
-          aria-label="GitHub"
-          class="text-slate-400 transition-all duration-300 hover:text-accent hover:-translate-y-1"
-        >
-          <Icon name="mdi:github" size="28" />
-        </a>
-        <a
-          href="https://linkedin.com/in/haidarmiqdad"
-          target="_blank"
-          aria-label="LinkedIn"
-          class="text-slate-400 transition-all duration-300 hover:text-accent hover:-translate-y-1"
-        >
-          <Icon name="mdi:linkedin" size="28" />
-        </a>
-        <a
-          href="https://instagram.com/haidarmiqdad"
-          target="_blank"
-          aria-label="Instagram"
-          class="text-slate-400 transition-all duration-300 hover:text-accent hover:-translate-y-1"
-        >
-          <Icon name="mdi:instagram" size="28" />
-        </a>
+    <div class="mx-auto max-w-[1000px] px-6 md:px-12">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="text-center md:text-left space-y-4">
+          <div class="space-y-1">
+            <h3
+              class="text-xl font-display font-bold text-slate-200 tracking-wide"
+            >
+              Haidar Miqdad
+            </h3>
+            <p class="text-sm text-slate-500 max-w-xs mx-auto md:mx-0">
+              Building scalable systems with precision and performance.
+            </p>
+          </div>
+
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/40 border border-white/5 shadow-inner"
+          >
+            <span class="relative flex h-2 w-2">
+              <span
+                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"
+              ></span>
+              <span
+                class="relative inline-flex rounded-full h-2 w-2 bg-accent"
+              ></span>
+            </span>
+            <span class="text-xs font-mono text-slate-300">
+              All systems operational
+            </span>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <a
+            v-for="social in socials"
+            :key="social.name"
+            :href="social.url"
+            target="_blank"
+            :aria-label="social.name"
+            class="group flex items-center justify-center w-12 h-12 rounded-full bg-white/5 border border-white/5 text-slate-400 transition-all duration-300 hover:bg-accent/10 hover:text-accent hover:border-accent/20 hover:scale-110"
+          >
+            <Icon :name="social.icon" size="22" />
+          </a>
+        </div>
       </div>
 
-      <p class="text-slate-300 text-lg mb-3">
-        Designed & Built by
-        <span class="text-accent font-mono font-medium">Haidar Miqdad</span>
-      </p>
+      <div class="h-px w-full bg-white/5 my-8"></div>
 
-      <p
-        class="text-slate-500 text-sm flex items-center justify-center gap-2 flex-wrap"
+      <div
+        class="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-600 font-mono"
       >
-        Built with
-        <span class="flex items-center gap-1">
+        <p>
+          © {{ new Date().getFullYear() }} Haidar Miqdad. All rights reserved.
+        </p>
+
+        <p class="flex items-center gap-2">
+          Crafted with
           <Icon
             name="logos:nuxt-icon"
+            class="opacity-50 grayscale hover:grayscale-0 transition-all"
             size="14"
-            class="opacity-70 grayscale hover:grayscale-0 transition-all"
           />
-          Nuxt 3 </span
-        >,
-        <span class="flex items-center gap-1">
+          &
           <Icon
             name="logos:tailwindcss-icon"
+            class="opacity-50 grayscale hover:grayscale-0 transition-all"
             size="14"
-            class="opacity-70 grayscale hover:grayscale-0 transition-all"
           />
-          Tailwind CSS
-        </span>
-        & Glassmorphism concept.
-      </p>
-
-      <p class="text-slate-600 text-xs mt-8 font-mono">
-        © {{ new Date().getFullYear() }} All rights reserved.
-      </p>
+        </p>
+      </div>
     </div>
   </footer>
 </template>
 
 <script setup lang="ts">
-// Tidak ada script logic yang diperlukan
+const socials = [
+  {
+    name: "GitHub",
+    url: "https://github.com/haidar-miqdad",
+    icon: "mdi:github",
+  },
+  {
+    name: "LinkedIn",
+    url: "https://linkedin.com/in/haidarmiqdad",
+    icon: "mdi:linkedin",
+  },
+  {
+    name: "Instagram",
+    url: "https://instagram.com/haidarmiqdad",
+    icon: "mdi:instagram",
+  },
+];
 </script>
