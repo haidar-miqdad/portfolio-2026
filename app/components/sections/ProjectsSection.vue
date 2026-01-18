@@ -3,6 +3,9 @@
 import { projects } from "~/utils/projectData"; // Import data
 import { useRouter } from "vue-router";
 
+const config = useRuntimeConfig();
+const base = config.app.baseURL;
+
 const router = useRouter();
 const isModalOpen = ref(false);
 const selectedProject = ref(null);
@@ -77,7 +80,7 @@ const openProject = (project: any) => {
       </div>
 
       <div class="mt-12 text-center">
-        <BaseButton href="/projects" variant="outline" class="!px-8">
+        <BaseButton :href="base + 'projects'" variant="outline" class="!px-8">
           View Full Project Archive
           <Icon name="mdi:arrow-right" class="ml-2" />
         </BaseButton>
