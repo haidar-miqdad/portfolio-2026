@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import cvFile from "~/assets/pdf/CV_Haidar_Miqdad.pdf";
+
+const config = useRuntimeConfig();
+const base = config.app.baseURL;
 const slideUp = {
   initial: { opacity: 0, y: 30 },
   enter: { opacity: 1, y: 0, transition: { duration: 800, ease: "easeOut" } },
@@ -126,7 +130,7 @@ const orbitingStack = [
               />
             </BaseButton>
 
-            <BaseButton href="pdf/CV_Haidar_Miqdad.pdf" variant="outline">
+            <BaseButton :href="cvFile" target="_blank" variant="outline">
               Download CV
             </BaseButton>
           </div>

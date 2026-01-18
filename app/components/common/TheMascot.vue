@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useWindowScroll } from "@vueuse/core";
-import mascotAnimation from "~/assets/animations/mascot.json";
+import mascotAnimation from "~/public/animations/mascot.json";
 
 const { y } = useWindowScroll();
 
